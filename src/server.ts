@@ -10,7 +10,7 @@ import AppError from './errors/AppError';
 const app = express();
 const PORT = 3333;
 
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.directory));
 
