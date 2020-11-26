@@ -13,7 +13,7 @@ describe('CreateUser', () => {
     );
 
     const user = await createUser.execute({
-      name: 'Jonh Doe',
+      name: 'John Doe',
       email: 'johndoe@example.com',
       password: '123456',
     });
@@ -30,14 +30,14 @@ describe('CreateUser', () => {
     );
 
     await createUser.execute({
-      name: 'Jonh Doe',
+      name: 'John Doe',
       email: 'johndoe@example.com',
       password: '123456',
     });
 
-    expect(
+    await expect(
       createUser.execute({
-        name: 'Jonh Doe',
+        name: 'John Doe',
         email: 'johndoe@example.com',
         password: '123456',
       }),
